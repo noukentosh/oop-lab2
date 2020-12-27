@@ -22,18 +22,12 @@ number TPolinom::value (number x) {
 }
 
 unsigned int TPolinom::roots (number* result) {
-    number discriminant = b * b - 4 * a * c;
+    number discriminant = b * b - a * c * 4;
 
-    if (discriminant == 0) {
-        result[0] = -b / (2 * a);
-        return 1;
-    }
+    number sqrt_discriminant = sqrt(discriminant);
 
-    if (discriminant > 0) {
-        result[0] = (-b - sqrt(discriminant)) / (2 * a);
-        result[1] = (-b + sqrt(discriminant)) / (2 * a);
-        return 2;
-    }
+    result[0] = ((b * (-1)) - sqrt_discriminant) / (a * 2);
+    result[1] = ((b * (-1)) + sqrt_discriminant) / (a * 2);
 
-    return 0;
+    return 2;
 }

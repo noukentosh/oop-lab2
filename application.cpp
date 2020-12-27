@@ -49,7 +49,7 @@ int TApplication::exec () {
                 std::cout << "x = ";
                 std::cin >> x;
 
-                std::cout << polinom.value(x) << std::endl;
+                //std::cout << polinom.value(x) << std::endl;
                 break;
             }
 

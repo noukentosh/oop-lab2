@@ -9,6 +9,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
         application.cpp \
+        complex.cpp \
         main.cpp \
         polinom.cpp
 
@@ -19,5 +20,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     application.h \
+    complex.h \
     number.h \
     polinom.h
